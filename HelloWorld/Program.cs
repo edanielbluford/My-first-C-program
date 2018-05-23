@@ -236,9 +236,12 @@ namespace HelloWorld
             //    action = Console.ReadLine().ToLower();
             //} while (action != "exit");
 
+            string[] elements = messageTwo.Split(' ');
+            Console.WriteLine(elements[0]); // prints "I"
+            Console.WriteLine(elements[1]); // prints "am"
+            Console.WriteLine(elements[2]); // prints "Spartacus"
 
 
-            
             string action = " ";
             while (action != "exit") // while loop
             {
@@ -267,6 +270,29 @@ namespace HelloWorld
                 }
                 Console.WriteLine("Add another? Type exit to quit");
                 action = Console.ReadLine().ToLower();
+            }
+
+            int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
+            Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " +
+                foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
+
+            List<string> foodList = new List<string>();
+            foodList.Add("Milk");
+            foodList.Add("Fruit");
+            foodList.Add("Meat");
+            foodList.Add("Wine");
+            foodList.Add("Bread");
+
+            ////Part fourteen for-loop examples
+            //for (int i = 0; i < foodAmount.Length; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            for (int i = 0; i < foodAmount.Length; i++)
+            {
+                Console.WriteLine("Enter a value for " + foodList[i]);
+                foodAmount[i] = int.Parse(Console.ReadLine());
             }
         }
         }
